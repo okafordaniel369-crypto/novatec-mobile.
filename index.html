@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOVATEC MOBILE | Premium Phones</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  background:#050608;
+  color:#f5f7fa;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  background:rgba(5,6,8,.78);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+
+.nav-inner{
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+.logo span{
+  color:#168cff;
+}
+
+.nav-links{
+  display:flex;
+  gap:28px;
+  font-size:14px;
+  color:#aeb6c2;
+}
+
+.nav-links a:hover{
+  color:white;
+}
+
+.nav-button{
+  background:#168cff;
+  padding:10px 18px;
+  border-radius:9px;
+  font-weight:700;
+  font-size:13px;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding-top:100px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  background:rgba(22,140,255,.14);
+  filter:blur(100px);
+  border-radius:50%;
+  right:-180px;
+  top:100px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  border:1px solid rgba(22,140,255,.35);
+  background:rgba(22,140,255,.08);
+  color:#70b9ff;
+  padding:7px 12px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:clamp(48px,7vw,82px);
+  line-height:.95;
+  letter-spacing:-4px;
+  margin-bottom:25px;
+}
+
+.hero h1 span{
+  color:#168cff;
+}
+
+.hero p{
+  color:#9ca5b2;
+  max-width:510px;
+  font-size:18px;
+  margin-bottom:32px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.primary{
+  background:#168cff;
+  padding:14px 23px;
+  border-radius:10px;
+  font-weight:800;
+  transition:.25s;
+}
+
+.primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 30px rgba(22,140,255,.25);
+}
+
+.secondary{
+  border:1px solid #252a32;
+  padding:14px 23px;
+  border-radius:10px;
+  font-weight:700;
+  color:#cbd1da;
+}
+
+/* HERO PHONE */
+.hero-phone-area{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:550px;
+}
+
+.phone{
+  position:relative;
+  width:235px;
+  height:475px;
+  border-radius:42px;
+  background:linear-gradient(145deg,#30343b,#090a0d 45%,#1d2127);
+  padding:7px;
+  box-shadow:
+    0 40px 80px rgba(0,0,0,.7),
+    0 0 0 1px rgba(255,255,255,.12),
+    inset 2px 0 2px rgba(255,255,255,.15);
+  transform:rotate(7deg);
+}
+
+.phone::before{
+  content:"";
+  position:absolute;
+  left:-4px;
+  top:105px;
+  width:4px;
+  height:54px;
+  border-radius:4px 0 0 4px;
+  background:#343840;
+}
+
+.phone::after{
+  content:"";
+  position:absolute;
+  right:-4px;
+  top:130px;
+  width:4px;
+  height:78px;
+  border-radius:0 4px 4px 0;
+  background:#343840;
+}
+
+.phone-screen{
+  width:100%;
+  height:100%;
+  border-radius:36px;
+  overflow:hidden;
+  position:relative;
+  background:
+    radial-gradient(circle at 25% 20%,#167cff 0,transparent 30%),
+    radial-gradient(circle at 80% 80%,#8c1eff 0,transparent 35%),
+    linear-gradient(145deg,#07101c,#10131d 50%,#030406);
+  border:2px solid #050608;
+}
+
+.phone-screen::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:30%;
+  background:linear-gradient(135deg,rgba(255,255,255,.15),transparent 45%);
+}
+
+.dynamic-island{
+  position:absolute;
+  width:88px;
+  height:25px;
+  background:#000;
+  border-radius:20px;
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.screen-time{
+  position:absolute;
+  top:15px;
+  left:22px;
+  font-size:10px;
+  font-weight:700;
+}
+
+.screen-content{
+  position:absolute;
+  bottom:45px;
+  left:25px;
+}
+
+.screen-content small{
+  color:#a8cfff;
+  font-size:10px;
+}
+
+.screen-content h3{
+  font-size:30px;
+  line-height:1;
+  margin-top:5px;
+}
+
+.phone-glow{
+  position:absolute;
+  width:230px;
+  height:230px;
+  border-radius:50%;
+  background:#168cff;
+  filter:blur(100px);
+  opacity:.15;
+  z-index:-1;
+}
+
+/* TRUST */
+.trust{
+  border-top:1px solid #15181d;
+  border-bottom:1px solid #15181d;
+  padding:25px 0;
+  background:#080a0d;
+}
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.trust-item{
+  text-align:center;
+  color:#aeb5bf;
+  font-size:13px;
+}
+
+.trust-item strong{
+  display:block;
+  color:white;
+  font-size:14px;
+  margin-bottom:4px;
+}
+
+/* SECTIONS */
+section{
+  padding:100px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:55px;
+}
+
+.section-title span{
+  color:#168cff;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.section-title h2{
+  font-size:42px;
+  letter-spacing:-1.5px;
+  margin-top:8px;
+}
+
+.section-title p{
+  color:#8e97a4;
+  max-width:570px;
+  margin:12px auto 0;
+}
+
+/* PRODUCTS */
+.products{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.product-card{
+  background:linear-gradient(145deg,#0d1015,#090b0e);
+  border:1px solid #191e25;
+  border-radius:22px;
+  padding:25px;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.product-card:hover{
+  transform:translateY(-8px);
+  border-color:#27384b;
+}
+
+.product-visual{
+  height:310px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  margin-bottom:15px;
+}
+
+/* REALISTIC PRODUCT PHONES */
+.product-phone{
+  position:relative;
+  width:150px;
+  height:275px;
+  border-radius:29px;
+  padding:5px;
+  background:linear-gradient(145deg,#4b5058,#17191d 45%,#30343b);
+  box-shadow:
+    0 25px 40px rgba(0,0,0,.65),
+    0 0 0 1px rgba(255,255,255,.12),
+    inset 1px 0 2px rgba(255,255,255,.22);
+  transform:rotate(-7deg);
+}
+
+.product-phone.samsung{
+  transform:rotate(6deg);
+  border-radius:25px;
+  background:linear-gradient(145deg,#5d6570,#15181c 50%,#323840);
+}
+
+.product-phone.max{
+  transform:rotate(5deg);
+  width:157px;
+  height:287px;
+}
+
+.product-screen{
+  height:100%;
+  width:100%;
+  border-radius:24px;
+  overflow:hidden;
+  position:relative;
+  background:linear-gradient(145deg,#07111c,#101827 55%,#020304);
+  border:1px solid #050609;
+}
+
+.product-phone.samsung .product-screen{
+  border-radius:21px;
+  background:
+    radial-gradient(circle at 70% 25%,#00a8ff,transparent 27%),
+    radial-gradient(circle at 20% 80%,#5530ff,transparent 35%),
+    #080b11;
+}
+
+.product-phone.max .product-screen{
+  background:
+    radial-gradient(circle at 75% 30%,#ff355f,transparent 25%),
+    radial-gradient(circle at 20% 80%,#6633ff,transparent 35%),
+    #080910;
+}
+
+.dynamic-island-small{
+  position:absolute;
+  top:7px;
+  left:50%;
+  transform:translateX(-50%);
+  width:48px;
+  height:14px;
+  background:#000;
+  border-radius:20px;
+  z-index:5;
+}
+
+.samsung-camera{
+  position:absolute;
+  top:15px;
+  left:15px;
+  width:42px;
+  height:92px;
+  z-index:10;
+  border-radius:24px;
+  background:linear-gradient(145deg,#22262b,#08090b);
+  padding:5px;
+  box-shadow:0 3px 8px rgba(0,0,0,.5);
+}
+
+.lens{
+  width:13px;
+  height:13px;
+  border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#7d8794 0 10%,#161b21 25%,#050608 70%);
+  border:2px solid #444a52;
+  margin-bottom:5px;
+}
+
+.apple-camera{
+  position:absolute;
+  top:12px;
+  left:11px;
+  width:53px;
+  height:53px;
+  background:linear-gradient(145deg,#454a51,#181b1f);
+  border-radius:17px;
+  z-index:10;
+  box-shadow:0 4px 10px rgba(0,0,0,.45);
+}
+
+.apple-lens{
+  position:absolute;
+  width:17px;
+  height:17px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 35% 28%,#91a5bb 0 7%,#24303c 18%,#06080a 65%);
+  border:2px solid #090a0c;
+  box-shadow:0 0 0 1px #626871;
+}
+
+.apple-lens.one{
+  top:8px;
+  left:8px;
+}
+
+.apple-lens.two{
+  top:27px;
+  left:27px;
+}
+
+.apple-lens.three{
+  top:27px;
+  left:8px;
+}
+
+.camera-flash{
+  position:absolute;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#d8d4b8;
+  top:9px;
+  right:8px;
+}
+
+.camera-dot{
+  position:absolute;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:#050608;
+  top:20px;
+  right:9px;
+}
+
+.apple-logo{
+  position:absolute;
+  left:50%;
+  top:58%;
+  transform:translate(-50%,-50%);
+  color:rgba(255,255,255,.2);
+  font-size:24px;
+  font-weight:700;
+}
+
+/* product details */
+.product-card h3{
+  font-size:22px;
+  margin-top:8px;
+}
+
+.product-meta{
+  color:#7f8895;
+  font-size:13px;
+  margin:3px 0 15px;
+}
+
+.price{
+  font-size:21px;
+  font-weight:900;
+  margin-bottom:18px;
+}
+
+.buy-button{
+  display:block;
+  text-align:center;
+  background:#168cff;
+  padding:12px;
+  border-radius:9px;
+  font-size:13px;
+  font-weight:800;
+}
+
+/* SWAP */
+.swap{
+  background:#080a0e;
+}
+
+.swap-box{
+  border:1px solid #1b222b;
+  border-radius:26px;
+  padding:55px;
+  background:
+    radial-gradient(circle at 80% 10%,rgba(22,140,255,.09),transparent 35%),
+    #0b0e12;
+}
+
+.swap-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.swap-box h2{
+  font-size:40px;
+  line-height:1.1;
+  margin-bottom:15px;
+}
+
+.swap-box p{
+  color:#929ba7;
+  margin-bottom:25px;
+}
+
+.steps{
+  display:grid;
+  gap:15px;
+}
+
+.step{
+  display:flex;
+  gap:15px;
+  align-items:flex-start;
+  padding:15px;
+  border:1px solid #1b2027;
+  border-radius:13px;
+}
+
+.step-number{
+  width:35px;
+  height:35px;
+  flex-shrink:0;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#168cff;
+  font-weight:900;
+  font-size:13px;
+}
+
+/* WHY US */
+.features{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.feature{
+  border:1px solid #1b2027;
+  border-radius:18px;
+  padding:30px;
+  background:#090b0f;
+}
+
+.feature-icon{
+  font-size:28px;
+  margin-bottom:17px;
+}
+
+.feature h3{
+  margin-bottom:8px;
+}
+
+.feature p{
+  color:#858e9b;
+  font-size:14px;
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+  background:
+    radial-gradient(circle at center,rgba(22,140,255,.14),transparent 55%),
+    #050608;
+  border-top:1px solid #161a20;
+}
+
+.cta h2{
+  font-size:48px;
+  letter-spacing:-2px;
+  margin-bottom:12px;
+}
+
+.cta p{
+  color:#8f98a4;
+  margin-bottom:25px;
+}
+
+.contact-info{
+  margin-top:30px;
+  color:#aeb6c0;
+  font-size:14px;
+  line-height:2;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:57px;
+  height:57px;
+  border-radius:50%;
+  background:#20c063;
+  display:grid;
+  place-items:center;
+  z-index:999;
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+  font-size:26px;
+}
+
+/* FOOTER */
+footer{
+  border-top:1px solid #15181d;
+  padding:30px 0;
+  text-align:center;
+  color:#666f7b;
+  font-size:12px;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .nav-button{
+    padding:9px 13px;
+  }
+
+  .hero{
+    padding-top:110px;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+    text-align:center;
+  }
+
+  .hero p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .hero-phone-area{
+    min-height:430px;
+  }
+
+  .phone{
+    width:195px;
+    height:395px;
+  }
+
+  .trust-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  section{
+    padding:75px 0;
+  }
+
+  .section-title h2{
+    font-size:34px;
+  }
+
+  .products{
+    grid-template-columns:1fr;
+  }
+
+  .product-visual{
+    height:330px;
+  }
+
+  .swap-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .swap-box{
+    padding:30px 20px;
+  }
+
+  .swap-box h2{
+    font-size:32px;
+  }
+
+  .features{
+    grid-template-columns:1fr;
+  }
+
+  .cta h2{
+    font-size:38px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container nav-inner">
+    <div class="logo">NOVATEC <span>MOBILE</span></div>
+
+    <div class="nav-links">
+      <a href="#phones">Phones</a>
+      <a href="#swap">Swap</a>
+      <a href="#why">Why Us</a>
+    </div>
+
+    <a class="nav-button" href="#shop">Shop Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container hero-grid">
+
+    <div>
+      <div class="badge">● PREMIUM DEVICES</div>
+
+      <h1>
+        Upgrade<br>
+        Your <span>World.</span>
+      </h1>
+
+      <p>
+        Premium smartphones. Trusted deals. Easy ordering.
+        Find your next device with NOVATEC MOBILE.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="primary" href="#phones">Explore Phones</a>
+        <a class="secondary" href="#swap">Swap Your Phone</a>
+      </div>
+    </div>
+
+    <div class="hero-phone-area">
+      <div class="phone-glow"></div>
+
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="dynamic-island"></div>
+          <div class="screen-time">9:41</div>
+
+          <div class="screen-content">
+            <small>NOVATEC MOBILE</small>
+            <h3>Future<br>in hand.</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="container trust-grid">
+
+    <div class="trust-item">
+      <strong>100% Genuine</strong>
+      Quality Devices
+    </div>
+
+    <div class="trust-item">
+      <strong>Trusted Service</strong>
+      Customer First
+    </div>
+
+    <div class="trust-item">
+      <strong>Phone Swaps</strong>
+      Upgrade Easily
+    </div>
+
+    <div class="trust-item">
+      <strong>WhatsApp Orders</strong>
+      Fast & Simple
+    </div>
+
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section id="phones">
+  <div class="container">
+
+    <div class="section-title">
+      <span>Featured Devices</span>
+      <h2>Phones worth showing off.</h2>
+      <p>
+        A selection of premium devices available through NOVATEC MOBILE.
+      </p>
+    </div>
+
+    <div class="products">
+
+      <!-- IPHONE 15 PRO -->
+      <div class="product-card">
+
+        <div class="product-visual">
+
+          <div class="product-phone">
+            <div class="product-screen">
+              <div class="dynamic-island-small"></div>
+              <div class="apple-logo"></div>
+            </div>
+
+            <div class="apple-camera">
+              <div class="apple-lens one"></div>
+              <div class="apple-lens two"></div>
+              <div class="apple-lens three"></div>
+              <div class="camera-flash"></div>
+              <div class="camera-dot"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <h3>iPhone 15 Pro</h3>
+        <div class="product-meta">128GB • Titanium • Premium</div>
+        <div class="price">₦1,250,000</div>
+
+        <a class="buy-button" href="https://wa.me/2348000000000">
+          Order on WhatsApp
+        </a>
+
+      </div>
+
+      <!-- SAMSUNG -->
+      <div class="product-card">
+
+        <div class="product-visual">
+
+          <div class="product-phone samsung">
+
+            <div class="product-screen">
+              <div class="samsung-camera">
+                <div class="lens"></div>
+                <div class="lens"></div>
+                <div class="lens"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <h3>Samsung Galaxy S24</h3>
+        <div class="product-meta">256GB • Titanium Gray • Flagship</div>
+        <div class="price">₦1,050,000</div>
+
+        <a class="buy-button" href="https://wa.me/2348000000000">
+          Order on WhatsApp
+        </a>
+
+      </div>
+
+      <!-- IPHONE 14 PRO MAX -->
+      <div class="product-card">
+
+        <div class="product-visual">
+
+          <div class="product-phone max">
+
+            <div class="product-screen">
+              <div class="dynamic-island-small"></div>
+              <div class="apple-logo"></div>
+            </div>
+
+            <div class="apple-camera">
+              <div class="apple-lens one"></div>
+              <div class="apple-lens two"></div>
+              <div class="apple-lens three"></div>
+              <div class="camera-flash"></div>
+              <div class="camera-dot"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <h3>iPhone 14 Pro Max</h3>
+        <div class="product-meta">256GB • Deep Purple • Pro Max</div>
+        <div class="price">₦1,100,000</div>
+
+        <a class="buy-button" href="https://wa.me/2348000000000">
+          Order on WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SWAP -->
+<section id="swap" class="swap">
+  <div class="container">
+
+    <div class="swap-box">
+
+      <div class="swap-grid">
+
+        <div>
+          <div class="section-title" style="text-align:left;margin-bottom:0;">
+            <span>Trade & Upgrade</span>
+            <h2>Turn your old phone into your next upgrade.</h2>
+          </div>
+
+          <p>
+            Got a phone you're ready to leave behind?
+            Bring it to NOVATEC MOBILE and upgrade to something better.
+          </p>
+
+          <a class="primary" href="https://wa.me/2348000000000">
+            Ask About a Swap
+          </a>
+        </div>
+
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-number">1</div>
+            <div>
+              <strong>Tell us your phone</strong>
+              <p>Send your device model and condition.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <div>
+              <strong>Get a valuation</strong>
+              <p>We'll assess your device and discuss the deal.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <div>
+              <strong>Choose your upgrade</strong>
+              <p>Pay the difference and move to your next phone.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="container">
+
+    <div class="section-title">
+      <span>Why Novatec</span>
+      <h2>Simple. Reliable. Premium.</h2>
+    </div>
+
+    <div class="features">
+
+      <div class="feature">
+        <div class="feature-icon">◈</div>
+        <h3>Genuine Devices</h3>
+        <p>
+          We focus on quality smartphones and transparent device information.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">₦</div>
+        <h3>Fair Deals</h3>
+        <p>
+          Get competitive pricing without the unnecessary showroom drama.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">↗</div>
+        <h3>Easy Ordering</h3>
+        <p>
+          Choose your device, message us on WhatsApp and get started.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="shop" class="cta">
+  <div class="container">
+
+    <h2>Ready for your next phone?</h2>
+
+    <p>
+      Browse the collection or message NOVATEC MOBILE directly.
+    </p>
+
+    <a class="primary" href="https://wa.me/2348000000000">
+      Chat on WhatsApp
+    </a>
+
+    <div class="contact-info">
+      📍 Enugu, Nigeria<br>
+      📱 WhatsApp Orders<br>
+      🕘 Monday - Saturday • 9AM - 7PM
+    </div>
+
+  </div>
+</section>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/2348000000000" aria-label="WhatsApp">
+  ☎
+</a>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    © 2026 NOVATEC MOBILE • Demo website created for portfolio purposes.
+  </div>
+</footer>
+
+</body>
+</html>

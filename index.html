@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Novatec Mobile | Premium Devices. Trusted Deals.</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #07090d;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(7, 9, 13, 0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid rgba(80, 160, 255, 0.12);
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #4da3ff;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #b9c0cc;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4da3ff;
+}
+
+.nav-cta {
+    background: #4da3ff;
+    color: #06101d !important;
+    padding: 10px 17px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    padding: 140px 7% 90px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 80% 35%,
+            rgba(30, 110, 220, 0.25),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(20, 70, 130, 0.18),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #05070a,
+            #0a111c,
+            #06080c
+        );
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 70px;
+
+    align-items: center;
+}
+
+.hero-text {
+    animation: heroIn 0.9s ease forwards;
+}
+
+.eyebrow {
+    color: #4da3ff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 8vw, 92px);
+    line-height: 0.95;
+    letter-spacing: -4px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #4da3ff;
+}
+
+.hero h2 {
+    color: #e7eaf0;
+    font-size: clamp(21px, 3vw, 31px);
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 590px;
+    color: #8993a3;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 26px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #4da3ff;
+    color: #06101d;
+    box-shadow: 0 12px 35px rgba(77, 163, 255, 0.18);
+}
+
+.primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 45px rgba(77, 163, 255, 0.3);
+}
+
+.secondary {
+    border: 1px solid #343c48;
+    color: #fff;
+}
+
+.secondary:hover {
+    border-color: #4da3ff;
+    color: #4da3ff;
+}
+
+
+/* =========================
+   PHONE VISUAL
+========================= */
+
+.hero-phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: phoneIn 1s ease forwards;
+}
+
+.phone {
+    width: 245px;
+    height: 480px;
+
+    border-radius: 38px;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 35% 20%,
+            #456b91,
+            #15283b 35%,
+            #080b10 75%
+        );
+
+    border: 7px solid #252b34;
+
+    box-shadow:
+        0 0 0 2px #08090b,
+        0 30px 80px rgba(0,0,0,0.7),
+        0 0 80px rgba(77,163,255,0.15);
+
+    transform: rotate(8deg);
+}
+
+.phone::before {
+    content: "";
+
+    position: absolute;
+
+    top: 12px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 85px;
+    height: 22px;
+
+    background: #050608;
+    border-radius: 20px;
+}
+
+.phone-camera {
+    position: absolute;
+    top: 35px;
+    left: 28px;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 20px;
+
+    background: #10141a;
+
+    border: 1px solid #39414d;
+}
+
+.lens {
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 35%,
+            #8cc9ff,
+            #10273b 45%,
+            #020305 70%
+        );
+
+    border: 2px solid #3e4a59;
+
+    position: absolute;
+}
+
+.lens.one {
+    top: 9px;
+    left: 9px;
+}
+
+.lens.two {
+    top: 9px;
+    right: 9px;
+}
+
+.lens.three {
+    bottom: 9px;
+    left: 9px;
+}
+
+.phone-logo {
+    position: absolute;
+    bottom: 80px;
+    width: 100%;
+
+    text-align: center;
+
+    color: rgba(255,255,255,0.35);
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   TRUST BAR
+========================= */
+
+.trust-bar {
+    background: #0d1118;
+    border-top: 1px solid #171d26;
+    border-bottom: 1px solid #171d26;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.trust-item {
+    padding: 28px 15px;
+    text-align: center;
+    border-right: 1px solid #171d26;
+}
+
+.trust-item:last-child {
+    border-right: none;
+}
+
+.trust-item strong {
+    display: block;
+    color: #4da3ff;
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+.trust-item span {
+    color: #737d8d;
+    font-size: 12px;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section {
+    padding: 100px 7%;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-heading span {
+    color: #4da3ff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    font-size: clamp(36px, 6vw, 55px);
+    margin-top: 10px;
+}
+
+.section-heading p {
+    color: #778191;
+    margin-top: 12px;
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products {
+    background: #07090d;
+}
+
+.product-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    padding: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #131821,
+            #0c1016
+        );
+
+    border: 1px solid #202733;
+    border-radius: 18px;
+
+    transition: 0.35s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(77,163,255,0.55);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.35);
+}
+
+.product-image {
+    height: 210px;
+
+    border-radius: 13px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #263b52,
+            #10151d 65%
+        );
+
+    margin-bottom: 20px;
+}
+
+.mini-phone {
+    width: 105px;
+    height: 175px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #566f89,
+            #111820
+        );
+
+    border: 4px solid #303b47;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.5);
+
+    transform: rotate(-6deg);
+}
+
+.product-card:nth-child(2) .mini-phone {
+    transform: rotate(5deg);
+
+    background:
+        linear-gradient(
+            145deg,
+            #d6d9df,
+            #4c5664
+        );
+}
+
+.product-card:nth-child(3) .mini-phone {
+    transform: rotate(-3deg);
+
+    background:
+        linear-gradient(
+            145deg,
+            #182d47,
+            #05080c
+        );
+}
+
+.product-card h3 {
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.product-card p {
+    color: #737d8d;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    color: #4da3ff;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.buy-link {
+    color: #d9e5f5;
+    font-size: 12px;
+    border: 1px solid #35404e;
+    padding: 8px 11px;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.buy-link:hover {
+    color: #4da3ff;
+    border-color: #4da3ff;
+}
+
+
+/* =========================
+   SWAP SECTION
+========================= */
+
+.swap {
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(30,100,180,0.2),
+            transparent 30%
+        ),
+        #0c1118;
+}
+
+.swap-box {
+    max-width: 1050px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    align-items: center;
+}
+
+.swap-text span {
+    color: #4da3ff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 11px;
+}
+
+.swap-text h2 {
+    font-size: clamp(38px, 6vw, 58px);
+    line-height: 1;
+    margin: 15px 0 20px;
+}
+
+.swap-text p {
+    color: #808b9a;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.swap-card {
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #172231,
+            #0c1219
+        );
+
+    border: 1px solid #263546;
+    border-radius: 20px;
+}
+
+.swap-card h3 {
+    margin-bottom: 20px;
+}
+
+.swap-step {
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #26303b;
+}
+
+.swap-step:last-child {
+    border-bottom: none;
+}
+
+.step-number {
+    min-width: 32px;
+    height: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(77,163,255,0.12);
+    color: #4da3ff;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.swap-step p {
+    color: #8993a3;
+    font-size: 13px;
+}
+
+
+/* =========================
+   WHY US
+========================= */
+
+.why-us {
+    background: #07090d;
+}
+
+.why-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.why-card {
+    padding: 30px;
+
+    border: 1px solid #202733;
+    border-radius: 16px;
+
+    background: #0d1117;
+
+    transition: 0.3s;
+}
+
+.why-card:hover {
+    border-color: rgba(77,163,255,0.5);
+}
+
+.why-icon {
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.why-card h3 {
+    margin-bottom: 8px;
+}
+
+.why-card p {
+    color: #778191;
+    font-size: 13px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #07111e,
+            #0d1e31,
+            #07101b
+        );
+}
+
+.contact-box {
+    max-width: 750px;
+    margin: auto;
+}
+
+.contact h2 {
+    font-size: clamp(40px, 7vw, 68px);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    color: #8c98a8;
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+
+    color: #8290a2;
+    font-size: 13px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 40px 20px;
+    background: #030507;
+    text-align: center;
+}
+
+.footer-logo {
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.footer-logo span {
+    color: #4da3ff;
+}
+
+footer p {
+    color: #505967;
+    font-size: 12px;
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #4da3ff;
+    color: #06101d;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,0.5);
+
+    z-index: 999;
+
+    transition: 0.3s;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes heroIn {
+
+    from {
+        opacity: 0;
+        transform: translateX(-35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes phoneIn {
+
+    from {
+        opacity: 0;
+        transform: translateX(40px) rotate(15deg) scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) rotate(8deg) scale(1);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+    nav {
+        padding: 16px 5%;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .nav-links {
+        gap: 11px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .nav-cta {
+        display: none;
+    }
+
+    .hero {
+        padding: 125px 6% 75px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 55px;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-phone {
+        order: -1;
+    }
+
+    .phone {
+        width: 190px;
+        height: 370px;
+    }
+
+    .trust-bar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trust-item {
+        border-bottom: 1px solid #171d26;
+    }
+
+    section {
+        padding: 80px 6%;
+    }
+
+    .product-grid,
+    .why-grid,
+    .swap-box {
+        grid-template-columns: 1fr;
+    }
+
+    .swap-box {
+        gap: 30px;
+    }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 430px) {
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .product-grid {
+        gap: 15px;
+    }
+
+    .contact-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="logo">
+        NOVATEC <span>MOBILE</span>
+    </div>
+
+    <div class="nav-links">
+
+        <a href="#products">Phones</a>
+
+        <a href="#swap">Swap</a>
+
+        <a href="#why">Why Us</a>
+
+        <a href="#contact" class="nav-cta">
+            Shop Now
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+
+        <div class="hero-text">
+
+            <div class="eyebrow">
+                Premium Devices · Trusted Deals
+            </div>
+
+            <h1>
+                Upgrade<br>
+                <span>Your World.</span>
+            </h1>
+
+            <h2>
+                Phones worth showing off.
+            </h2>
+
+            <p>
+                Discover carefully selected smartphones, tablets and
+                accessories with trusted service and flexible swap options.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#products" class="button primary">
+                    Browse Phones
+                </a>
+
+                <a href="#swap" class="button secondary">
+                    Swap Your Phone
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-phone">
+
+            <div class="phone">
+
+                <div class="phone-camera">
+
+                    <div class="lens one"></div>
+                    <div class="lens two"></div>
+                    <div class="lens three"></div>
+
+                </div>
+
+                <div class="phone-logo">
+                    NOVATEC
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TRUST BAR
+========================= -->
+
+<div class="trust-bar">
+
+    <div class="trust-item">
+
+        <strong>100%</strong>
+
+        <span>
+            Genuine Devices
+        </span>
+
+    </div>
+
+
+    <div class="trust-item">
+
+        <strong>Trusted</strong>
+
+        <span>
+            Customer Service
+        </span>
+
+    </div>
+
+
+    <div class="trust-item">
+
+        <strong>Swap</strong>
+
+        <span>
+            Upgrade Your Device
+        </span>
+
+    </div>
+
+
+    <div class="trust-item">
+
+        <strong>Fast</strong>
+
+        <span>
+            WhatsApp Ordering
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<section class="products" id="products">
+
+    <div class="section-heading">
+
+        <span>
+            Featured Devices
+        </span>
+
+        <h2>
+            Pick Your Next Phone
+        </h2>
+
+        <p>
+            A few of our featured devices. Contact us for current stock.
+        </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <div class="mini-phone"></div>
+
+            </div>
+
+            <h3>
+                iPhone 15 Pro
+            </h3>
+
+            <p>
+                128GB · Titanium · Excellent condition
+            </p>
+
+            <div class="product-bottom">
+
+                <span class="price">
+                    ₦1,250,000
+                </span>
+
+                <a
+                    href="https://wa.me/2348000000000"
+                    class="buy-link"
+                >
+                    Enquire
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <div class="mini-phone"></div>
+
+            </div>
+
+            <h3>
+                Samsung Galaxy S24
+            </h3>
+
+            <p>
+                256GB · Premium Android flagship
+            </p>
+
+            <div class="product-bottom">
+
+                <span class="price">
+                    ₦1,050,000
+                </span>
+
+                <a
+                    href="https://wa.me/2348000000000"
+                    class="buy-link"
+                >
+                    Enquire
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <div class="mini-phone"></div>
+
+            </div>
+
+            <h3>
+                iPhone 14 Pro Max
+            </h3>
+
+            <p>
+                256GB · Pro camera · Great condition
+            </p>
+
+            <div class="product-bottom">
+
+                <span class="price">
+                    ₦1,100,000
+                </span>
+
+                <a
+                    href="https://wa.me/2348000000000"
+                    class="buy-link"
+                >
+                    Enquire
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SWAP
+========================= -->
+
+<section class="swap" id="swap">
+
+    <div class="swap-box">
+
+
+        <div class="swap-text">
+
+            <span>
+                Ready For An Upgrade?
+            </span>
+
+            <h2>
+                Swap Your Old Phone.
+            </h2>
+
+            <p>
+                Don't let your old device sit in a drawer.
+                Trade it toward your next upgrade and pay the difference.
+            </p>
+
+            <a
+                href="https://wa.me/2348000000000"
+                class="button primary"
+            >
+                Start A Swap
+            </a>
+
+        </div>
+
+
+        <div class="swap-card">
+
+            <h3>
+                How It Works
+            </h3>
+
+
+            <div class="swap-step">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <p>
+                    Tell us your current phone and its condition.
+                </p>
+
+            </div>
+
+
+            <div class="swap-step">
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <p>
+                    We'll assess the device and provide an estimated value.
+                </p>
+
+            </div>
+
+
+            <div class="swap-step">
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <p>
+                    Choose your upgrade and pay the difference.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WHY US
+========================= -->
+
+<section class="why-us" id="why">
+
+    <div class="section-heading">
+
+        <span>
+            The Novatec Difference
+        </span>
+
+        <h2>
+            Buy With Confidence.
+        </h2>
+
+        <p>
+            Because buying a phone shouldn't feel like gambling.
+        </p>
+
+    </div>
+
+
+    <div class="why-grid">
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                ✓
+            </div>
+
+            <h3>
+                Genuine Devices
+            </h3>
+
+            <p>
+                We focus on trustworthy devices and clear product
+                information.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                ◆
+            </div>
+
+            <h3>
+                Fair Deals
+            </h3>
+
+            <p>
+                Competitive pricing without unnecessary complications.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                →
+            </div>
+
+            <h3>
+                Easy Ordering
+            </h3>
+
+            <p>
+                Find your device, message us on WhatsApp and arrange
+                your purchase.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+    <div class="contact-box">
+
+        <h2>
+            Your Next Phone Is Waiting.
+        </h2>
+
+        <p>
+            Tell us what you're looking for and we'll help you find
+            the right device for your budget.
+        </p>
+
+
+        <!-- DEMO WHATSAPP NUMBER -->
+
+        <a
+            href="https://wa.me/2348000000000"
+            class="button primary"
+        >
+            Chat On WhatsApp
+        </a>
+
+
+        <div class="contact-details">
+
+            <span>
+                📍 Enugu, Nigeria
+            </span>
+
+            <span>
+                📱 WhatsApp Orders
+            </span>
+
+            <span>
+                🕐 Mon – Sat · 9AM – 7PM
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        NOVATEC <span>MOBILE</span>
+    </div>
+
+    <p>
+        © 2026 Novatec Mobile. Demo website created for portfolio purposes.
+    </p>
+
+</footer>
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+    href="https://wa.me/2348000000000"
+    class="whatsapp"
+    aria-label="Contact Novatec Mobile on WhatsApp"
+>
+    WA
+</a>
+
+
+</body>
+</html>
